@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title></title>
+  <link href="http://imathis.github.com/octopress/atom.xml" rel="self"/>
+  <link href="http://imathis.github.com/octopress/"/>
+  <updated>2011-07-16T11:05:30-04:00</updated>
+  <id>http://imathis.github.com/octopress/</id>
+  <author>
+    <name>Brandon Mathis</name>
+    
+      <email>brandon@imathis.com</email>
+    
+  </author>
+
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://imathis.github.com/octopress/blog/2011/06/27/hello-world"/>
+    <updated>2011-06-27T17:33:00-04:00</updated>
+    <id>http://imathis.github.com/octopress/blog/2011/06/27/hello-world</id>
+    <content type="html">&lt;p&gt;Octopress is an obsessively designed framework for Jekyll blogging. It's easy to configure and easy to deploy. Sweet huh?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Octopress sports a clean responsive theme&lt;/strong&gt; written in semantic HTML5, focused on readability and friendliness toward mobile devices.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Code blogging is easy and beautiful.&lt;/strong&gt; Embed code (with &lt;a href=&quot;http://ethanschoonover.com/solarized&quot;&gt;Solarized&lt;/a&gt; styling) in your posts from gists or from your filesystem.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Third party integration is simple&lt;/strong&gt; with built-in support for Twitter, Pinboard, Delicious, Disqus Comments, and Google Analytics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;It's easy to use.&lt;/strong&gt; A collection of rake tasks simplifies development and makes deploying a cinch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ships with great plugins&lt;/strong&gt; some original and others from the Jekyll community &amp;mdash; tested and improved.&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+  </entry>
+  
+</feed>
