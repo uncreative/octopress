@@ -59,12 +59,13 @@ end
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
   require './plugins/titlecase.rb'
+  mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
   filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,\.'":\(\)\[\]]/,'').gsub(/\W/, '-')}.#{new_post_ext}"
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
-    system "mkdir -p #{source_dir}/#{posts_dir}";
+    system "mkdir -p #{source_dir}/#{posts_dir}/";
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;').titlecase}\""
@@ -76,7 +77,7 @@ task :new_post, :title do |t, args|
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
-desc "Begin a new post in #{source_dir}/#{posts_dir}"
+desc "Begin a new page in #{source_dir}/#{posts_dir}"
 task :new_page, :filename do |t, args|
   require './plugins/titlecase.rb'
   args.with_defaults(:filename => 'new-page')
