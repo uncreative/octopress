@@ -1,1 +1,9 @@
-rvm 1.9.2
+echo "running octopress rvmrc"
+rvm use 1.9.2@octopress
+octoupdated=`git pull imathis master`
+
+if [ "$octoupdated" == "Already up-to-date." ]; then echo "up to date"; else echo "run:
+bundle install                # Keep gems updated
+rake update_source            # update the template's source
+rake update_style             # update the template's style
+"; fi

@@ -4,6 +4,7 @@ GEM
     RedCloth (4.2.7)
     albino (1.3.3)
       posix-spawn (>= 0.3.6)
+    awesome_print (0.4.0)
     blankslate (2.1.2.4)
     chunky_png (1.2.0)
     classifier (1.3.3)
@@ -17,6 +18,7 @@ GEM
     ffi (1.0.9)
     fssm (0.2.7)
     haml (3.1.2)
+    hirb (0.5.0)
     jekyll (0.11.0)
       albino (>= 1.3.2)
       classifier (>= 1.3.1)
@@ -41,14 +43,17 @@ GEM
       ffi (~> 1.0.7)
     sass (3.1.5)
     syntax (1.0.0)
+    wirble (0.1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   RedCloth
+  awesome_print
   compass (>= 0.11)
   haml (>= 3.1)
+  hirb
   jekyll
   pygments.rb
   rack
@@ -56,3 +61,4 @@ DEPENDENCIES
   rb-fsevent
   rdiscount
   rubypants
+  wirble
