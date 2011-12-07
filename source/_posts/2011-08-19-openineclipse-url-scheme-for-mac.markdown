@@ -69,14 +69,14 @@ Click on link again:
 
 * The alert displays the filename correctly but it doesn't open:
 
-    - Make sure path_to_eclipse is set to the correct location "/Applications/eclipse/Eclipse.app"
+Make sure path_to_eclipse is set to the correct location "/Applications/eclipse/Eclipse.app"
 
 ``` applescript
     set path_to_eclipse to "the/correct/absolute/path/of/Eclipse.app"  
 ```
 
-* .
-    - Make sure eclipse is able to open a file from terminal, maybe your eclipse version is too old?
+Make sure eclipse is able to open a file from terminal, maybe your eclipse version is too old?
+
 
 ``` bash
     $ open -a /path/to/your/eclipse.app /etc/hosts
@@ -85,9 +85,9 @@ Click on link again:
  
 * the file opens but it doesn't go to the line number: 
 
-    ** for system events to work with key code, you must "Enable access for assistive devices" in "System Preferences" under "Universal Access"
+for system events to work with key code, you must "Enable access for assistive devices" in "System Preferences" under "Universal Access"
 
-    ** If you change the keyboard shortcut for go to line in eclipse, you'll have to change the following line to send the correct key
+If you change the keyboard shortcut for go to line in eclipse, you'll have to change the following line to send the correct key
 
 ``` applescript
 	 tell application "System Events" to key code 37 using command down #send command L 
@@ -102,8 +102,24 @@ finally, you can try to increase the sleep time before eclipse tries 'go to line
 
 
 * An alert does not display
-** Check for the currently 
 
+LaunchServices is supposed to automatically register URL protocols of applications dragged to /Applications 
+
+You can see a list of all applications with registered url schemes as well as other information:
+
+``` bash
+    $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -dump > registeredapps.txt
+````
+
+under the bundle with the path: /Applications/OpenInEclipse.app you should find a claim id with the bindings openineclipse:
+
+You can force OSX to re-register the url scheme of all applications in /Applications with the following command:
+
+```
+    $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -f -r /Applications
+```
+
+or you can use the system's python to register just OpenInEclipse's url scheme:
 
 {% gist 1156457 force_registration_of_url_scheme.py %}
 
