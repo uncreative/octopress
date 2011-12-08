@@ -13,3 +13,13 @@ vendor
 node_modules
 _code_cache/
 _gist_cache/
+sass/
+source/_includes/
+source/_layouts/
+source/assets/
+source/atom.xml
+source/blog/
+source/index.html
+source/javascripts/
+source/favicon.png
+source/images
